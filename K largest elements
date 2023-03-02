@@ -1,0 +1,16 @@
+class Solution
+{
+    public:
+    //Function to return k largest elements from an array.
+    vector<int> kLargest(int arr[], int n, int k)
+    {
+        vector<int> v;
+        sort(arr,arr+n);
+        reverse(arr,arr+n);
+        while(k--){
+            v.push_back(arr[k]);
+        }
+        reverse(v.begin(),v.end());
+        return v;
+    }
+};
